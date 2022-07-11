@@ -1,0 +1,289 @@
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+:root{
+ --font-color: rgb(64, 255, 0) ;
+ --font-color-soft: rgba(64, 255, 0, 0.285) ;
+
+}
+
+.containerHead{
+  
+  background-image: url(./images/image3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  
+
+}
+
+.containerHead > img{
+  width: 35%;
+  height: 35%;
+}
+
+input{
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  
+   background-color: black;
+   color: rgb(64, 255, 0);
+   text-align: center;
+
+}
+
+input:focus{
+  outline: none;
+}
+
+input::placeholder{
+  color:var(--font-color-soft);
+}
+input:hover{
+  box-shadow: 0px 0px 5px 3px  var(--font-color);
+}
+
+button{
+  border: none;
+  height: 2rem;
+  border-bottom-right-radius: 0.5rem ;
+  border-top-right-radius: 0.5rem;
+  background-color: black;
+  color: var(--font-color);
+  width: 3rem;
+  margin-left: 0.2rem;
+  
+}
+button:hover{
+  box-shadow: 0px 0px 5px 3px  var(--font-color);
+}
+body{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.containerLocation{
+  
+  justify-content: center;
+  background-color: rgb(27, 27, 27);
+  width:70vw;
+  height:6rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+h3{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--font-color);
+}
+
+.containerLocationInfo{
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+
+  
+}
+
+.location{
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.containerCharacter{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+ gap: 1rem;
+  width: 70vw;
+}
+
+.characterInfo{
+  display: flex;
+  margin-bottom: 1rem;
+  
+}
+
+.image{
+  width: 50%;
+}
+
+.image > img{
+  width: 100%;
+ 
+  height: 100%;
+}
+.characterInfo >  .info{
+  text-align: center;
+  list-style: none;
+  background-color:rgb(27, 27, 27) ;
+  height: 100%;
+ padding: 1rem;
+  width: 50%;
+ 
+
+  
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+.containerStatus > .alive{
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: green;
+  margin-right:0.5rem ;
+}
+
+.containerStatus > .dead{
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color:red;
+  margin-right: 0.5rem;
+ 
+}
+
+.containerStatus > .unknown{
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 0.5rem;
+}
+
+
+.containerStatus{
+  display:flex ;
+  align-items: center;
+  position: relative;
+  left: -115px;
+  top: -69px;
+  background-color: rgba(255, 255, 255, 0.461);
+  height: 1.5rem;
+  width: 6rem;
+  padding: 5px;
+  border-radius: 0.8rem;
+  justify-content: center;
+  
+}
+
+.containerStatus > small{
+  color: black;
+}
+
+
+
+.info > li{
+  font-size: 15px;
+ padding: 0.5rem;
+ height: 3.5rem;
+}
+
+.info > p{
+  text-align: start;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+b{
+color: var(--font-color);
+margin-right:3px;
+}
+
+@media screen and (max-width: 768px){
+
+  .containerHead{
+  
+    background-image: url(./images/image3.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+  }
+
+  input{
+    height: 1rem;
+  
+  }
+
+  button{
+    height: 1rem;
+
+  }
+  .containerLocation{
+    font-size: 15px;
+  }
+  
+  .containerLocationInfo{
+    font-size:8px ;
+  }
+
+  .containerCharacter{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+   gap: 1rem;
+    width: 70vw;
+  }
+}
+
+@media  screen and (min-width: 680px) and (max-width: 768px){
+ .info > p{
+  font-size: 15px;
+ }
+
+ .info > li{
+  font-size: 20px;
+ }
+}
+
+@media  screen and (min-width: 680px) and (max-width: 768px){
+
+  .info > p{
+    font-size: 14px;
+
+   }
+}
+
+@media  screen and (min-width: 769px) and (max-width: 1006px){
+
+  .characterInfo{
+    height: 80%;
+    
+  }
+  .info > p{
+    font-size: 8px;
+  }
+
+  br{
+    height: 2px;
+  }
+}
+
